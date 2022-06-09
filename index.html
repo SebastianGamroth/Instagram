@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instadrama</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/templates.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body onload="includeHTML(), renderPosts(), renderProfile()">
+
+    <!-- header -->
+    <div w3-include-html="./templates/header.html"></div>
+
+    <!-- posts container -->
+    <div class="container">
+
+        <!-- posts -->
+        <div class="posts">
+            <div id="profileBar" class="profileBar"></div>
+            <div id="postContainer" class="postContainer"> </div>
+            <div class="arrowUp" id="arrowUp">
+                <a href="#"><img src="./img/arrowUp.png" alt="arrowUp"></a>
+            </div>
+        </div>
+
+        <!-- profile -->
+        <div class="profile">
+            <div class="profileFrame">
+                <div class="profileContainer">
+                    <div class="profileLeft">
+                        <img src="./img/profile_Sebastian.png" alt="profile">
+                        <h2>Sebastian</h2>
+                    </div>
+                    <a href="#">Wechseln</a>
+                </div>
+                <div class="profileSuggestions">
+                    <span>Vorschläge für dich</span>
+                    <a href="#">Alle ansehen</a>
+                </div>
+                <div class="profileBox" id="profileBox"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div w3-include-html="./templates/footer.html"></div>
+
+</body>
+
+</html>

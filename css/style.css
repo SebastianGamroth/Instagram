@@ -1,0 +1,534 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url(../fonts/PlusJakartaSans/plus-jakarta-sans-v2-latin-700.woff2);
+    src: url(../fonts/PlusJakartaSans/plus-jakarta-sans-v2-latin-regular.woff2);
+    font-display: fallback;
+}
+
+h2 {
+    font-size: 16px;
+    color: #0A3847;
+}
+
+/* header */
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.4px solid #DBDBDB;
+}
+
+.logo {
+    width: max-content;
+}
+
+.logo,
+header img {
+    height: 24px;
+    margin-left: 8px;
+    opacity: 0.8;
+    margin: 8px;
+    cursor: pointer;
+}
+
+header img {
+    width: 24px;
+}
+
+.headerSearch {
+    display: flex;
+    border-radius: 5px;
+    background-color: #EFEFEF;
+    position: relative;
+}
+
+.headerSearch img {
+    opacity: 0.4;
+}
+
+.headerSearch input {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #EFEFEF;
+}
+
+.headerIcons img {
+    margin-left: 20px;
+}
+
+.headerIcons {
+    margin-right: 8px;
+}
+
+.outputSearch {
+    position: absolute;
+    top: 46px;
+    background-color: #EFEFEF;
+    border-radius: 3px;
+}
+
+.outputSearch ul {
+    padding: 0px;
+    margin: 6px;
+}
+
+.outputSearch ul:hover {
+    background-color: #c7c7c7;
+}
+
+.outputSearch a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+}
+
+/* container */
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 16px 16px;
+}
+
+.posts {
+    max-width: 660px;
+    width: 100%;
+    position: relative;
+}
+
+/* profile top side*/
+
+.profileBar {
+    display: none;
+    border: 1.4px solid #DBDBDB;
+    border-radius: 3px;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.profileContainerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 13px;
+}
+
+.profileContainerTop img {
+    height: 56px;
+    width: 56px;
+    border-radius: 50px;
+    background-color: #d8e8cb;
+    margin-top: 8px;
+}
+
+.profileContainerTop h2 {
+    margin: 8px 0px;
+}
+
+.postContainer {
+    max-width: 660px;
+    width: 100%;
+}
+
+.postContainer ul {
+    display: flex;
+    flex-direction: column;
+    border: 1.4px solid #DBDBDB;
+    border-radius: 3px;
+    padding: 0px;
+    margin-top: 36px;
+    margin-bottom: 50px;
+}
+
+.postContainer h2 {
+    margin: 2px 16px 2px 16px;
+}
+
+.postContainer p {
+    margin: 2px 16px 8px 16px;
+    color: #0A3847;
+}
+
+.postContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 16px;
+}
+
+ul span,
+ul a {
+    margin-bottom: 6px;
+    margin-left: 16px;
+    color: #0A3847;
+}
+
+.postText {
+    font-size: 14px;
+    color: #0a3847e3;
+}
+
+ul a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #808080;
+}
+
+.socialMedia img {
+    height: 24px;
+    width: 24px;
+    margin-right: 16px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.mediaRight img {
+    margin: 0px;
+}
+
+.mediaLeft {
+    display: flex;
+}
+
+.unlike {
+    background-color: white;
+}
+
+.like {
+    background-color: red;
+}
+
+.comments {
+    border-top: 1px solid #DBDBDB;
+}
+
+.profileImage {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-top: 6px;
+}
+
+.profileImage img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50px;
+    background-color: #d8e8cb;
+}
+
+.profileImage h2 {
+    margin-left: 6px;
+}
+
+.d-none {
+    display: none;
+}
+
+.inputComments {
+    border-top: 1.4px solid #DBDBDB;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0px 16px;
+}
+
+.inputComments input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #262626;
+    width: 50%;
+}
+
+button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    color: #262626;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* profile right side*/
+.profile {
+    width: 350px;
+}
+
+.profileContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 26px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+.profileContainer img {
+    height: 56px;
+    width: 56px;
+    margin-right: 16px;
+    border-radius: 50px;
+    background-color: #d8e8cb;
+}
+
+.profileLeft {
+    display: flex;
+}
+
+.profileFrame {
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 114px;
+    margin-top: 18px;
+}
+
+.profileFrame a {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3789bd;
+}
+
+.profileSuggestions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0px 16px 26px;
+}
+
+.profileSuggestions span {
+    color: #808080;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profileBox {
+    overflow-y: auto;
+    height: calc(100% - 140px);
+}
+
+.profileBox img {
+    height: 34px;
+    width: 34px;
+}
+
+.profileLeft {
+    display: flex;
+    align-items: center;
+}
+
+/* footer */
+footer {
+    height: 160px;
+    background-color: #0A3847;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+.footerLogo img {
+    height: 32px;
+    filter: invert(1);
+}
+
+.footerAGB {
+    display: flex;
+}
+
+.footerAGB a {
+    color: white;
+    text-decoration: none;
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+.footerAGB a:hover {
+    text-decoration: underline;
+}
+
+/* impressum */
+.imprintSection {
+    display: flex;
+    justify-content: center;
+}
+
+.imprintCenter {
+    max-width: 1010px;
+    width: 100%;
+    margin: 20px 16px 30px 16px;
+}
+
+.imprintCenter h2 {
+    font-size: 16px;
+    color: #3e3e3e;
+}
+
+.imprintCenter p {
+    font-size: 13px;
+    color: #3e3e3e;
+}
+
+/* datenschutz */
+.privacySection {
+    display: flex;
+    justify-content: center;
+}
+
+.privacyCenter {
+    max-width: 1010px;
+    width: 100%;
+    margin: 20px 16px 30px 16px;
+}
+
+.privacyCenter p {
+    font-size: 13px;
+    color: #3e3e3e;
+}
+
+.privacyCenter li {
+    font-size: 14px;
+    color: #3a3a3a;
+}
+
+.privacyCenter h1 {
+    font-size: 18px;
+    color: #3a3a3a;
+}
+
+.privacyCenter h3,
+.privacyCenter h2 {
+    font-size: 16px;
+    color: #3a3a3a;
+}
+
+.arrowUp {
+    position: sticky;
+    bottom: 16px;
+
+    display: none;
+    justify-content: flex-end;
+    margin-right: 16px;
+    right: 16px;
+}
+
+.arrowUp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #8e8c8ca6;
+}
+
+.arrowUp img:hover {
+    background-color: #676767a6;
+}
+
+/* Urheberrechte */
+.copyRightContainer {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 222px);
+}
+
+.copyRightCenter {
+    max-width: 1010px;
+    /* width: 100%; */
+    margin: 20px 16px 30px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyRightCenter h2 {
+    color: #262626;
+    margin: 6px 0px;
+}
+
+.copyRight {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0px;
+}
+
+.copyBox {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    margin: 16px 0px;
+}
+
+.copyBox a {
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.copyBox a:hover {
+    text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 940px) {
+
+    /* profile top side*/
+    .profileBar {
+        display: flex;
+    }
+
+    .profile {
+        display: none;
+    }
+}
+
+@media (max-width: 730px) {
+    .headerIcons {
+        display: none;
+    }
+
+    .headerSearch {
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footerAGB {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        flex-direction: column;
+        height: 92px;
+    }
+
+    .headerSearch {
+        margin-bottom: 16px;
+        margin-right: 0px;
+    }
+}
